@@ -1,0 +1,4 @@
+rootProject.name = 'gradle_plugins'
+include ':utils'
+include(':jiagu',":pgyer_upload",":publish_maven_central")
+

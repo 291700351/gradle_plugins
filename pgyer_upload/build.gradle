@@ -1,0 +1,68 @@
+apply {
+    plugin("maven-publish")
+}
+def groupName = 'com.github.lee.gradle.plugins'
+def versionName = '1.0.0-SNAPSHOT'
+
+gradlePlugin {
+    plugins {
+        test {
+            id = project.name
+            implementationClass = 'com.github.lee.gradle.plugins.pgyer.PgyerUploadPlugin'
+        }
+    }
+}
+publishing {
+    repositories {
+//                mavenLocal()
+        maven {
+            credentials {
+                username '5f112dbb4c4e70fdbff3005c'
+                password 'DYiHkvkEKR4G'
+            }
+            if (versionName.contains("SNAPSHOT")) {
+                url 'https://packages.aliyun.com/maven/repository/2017701-snapshot-YBBn0v/'
+            } else {
+                url 'https://packages.aliyun.com/maven/repository/2017701-release-ubbvAx/'
+            }
+        }
+
+    }
+
+    publications {
+        maven(MavenPublication) {
+            pom {
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = "Lee"
+                        name = "Ice Lee"
+                        email = "lb291700351@live.cn"
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://example.com/my-library.git'
+                    developerConnection = 'scm:git:ssh://example.com/my-library.git'
+                    url = 'http://example.com/my-library/'
+                }
+            }
+            groupId = "$groupName"
+            artifactId = project.name
+            version = "$versionName"
+
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    implementation("com.android.tools.build:builder-model:7.0.0-alpha01")
+    implementation('com.squareup.okhttp3:okhttp:4.9.2')
+    implementation 'com.google.code.gson:gson:2.8.8'
+}
+

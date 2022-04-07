@@ -1,0 +1,108 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "gradle_plugins",
+    "module": "pgyer_upload",
+    "version": "unspecified",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "pgyer_upload-unspecified.jar",
+          "url": "pgyer_upload-unspecified.jar",
+          "size": 13132,
+          "sha512": "f07b4414436a5ec3acf2ffdd7865671b2d53e521e0a8712df001e15c02313dd2d81c40c95ab6d766545fc835f6b072f33dceaac3ae7a98ef5b3f10577e94aa0e",
+          "sha256": "be6048d2fee04fd143af51e47e401b927c5a1f03e323ba1a8010647bbc504538",
+          "sha1": "b05edffe05e740bb62a087c3b49077c2c2c6abca",
+          "md5": "5d683c18201f4d2c082a686fb2ce1551"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.31"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.0.0-alpha01"
+          }
+        },
+        {
+          "group": "com.github.lee.gradle.plugins",
+          "module": "utils",
+          "version": {
+            "requires": "1.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "builder-model",
+          "version": {
+            "requires": "7.0.0-alpha01"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.9.2"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "pgyer_upload-unspecified.jar",
+          "url": "pgyer_upload-unspecified.jar",
+          "size": 13132,
+          "sha512": "f07b4414436a5ec3acf2ffdd7865671b2d53e521e0a8712df001e15c02313dd2d81c40c95ab6d766545fc835f6b072f33dceaac3ae7a98ef5b3f10577e94aa0e",
+          "sha256": "be6048d2fee04fd143af51e47e401b927c5a1f03e323ba1a8010647bbc504538",
+          "sha1": "b05edffe05e740bb62a087c3b49077c2c2c6abca",
+          "md5": "5d683c18201f4d2c082a686fb2ce1551"
+        }
+      ]
+    }
+  ]
+}

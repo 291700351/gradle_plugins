@@ -1,0 +1,87 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "gradle_plugins",
+    "module": "utils",
+    "version": "unspecified",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "utils-unspecified.jar",
+          "url": "utils-unspecified.jar",
+          "size": 9966,
+          "sha512": "e43b850e3c1b88c84142df896714bf0c1b08f67bf72ecf163625a2101952f162165a6d4615775bd6a7d761c51887bf2e914e7959c979998d7f20c00455622e9c",
+          "sha256": "a2e92fcc503dbcf9959095e1c23d16a2aca5040c765277e2cff56fd4472ea1f3",
+          "sha1": "5b3efd070de78932174c570fd8c32afa58021a25",
+          "md5": "84a002ae73582466a4613b23fba123ab"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.31"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.0.0-alpha01"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.9.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "utils-unspecified.jar",
+          "url": "utils-unspecified.jar",
+          "size": 9966,
+          "sha512": "e43b850e3c1b88c84142df896714bf0c1b08f67bf72ecf163625a2101952f162165a6d4615775bd6a7d761c51887bf2e914e7959c979998d7f20c00455622e9c",
+          "sha256": "a2e92fcc503dbcf9959095e1c23d16a2aca5040c765277e2cff56fd4472ea1f3",
+          "sha1": "5b3efd070de78932174c570fd8c32afa58021a25",
+          "md5": "84a002ae73582466a4613b23fba123ab"
+        }
+      ]
+    }
+  ]
+}

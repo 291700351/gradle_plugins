@@ -1,0 +1,70 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+}
+repositories {
+    mavenCentral()
+    google()
+    maven {
+        url 'https://maven.aliyun.com/repository/public'
+    }
+    maven {
+        credentials {
+            username '5f112dbb4c4e70fdbff3005c'
+            password 'DYiHkvkEKR4G'
+        }
+        url 'https://packages.aliyun.com/maven/repository/2017701-release-ubbvAx/'
+    }
+    maven {
+        credentials {
+            username '5f112dbb4c4e70fdbff3005c'
+            password 'DYiHkvkEKR4G'
+        }
+        url 'https://packages.aliyun.com/maven/repository/2017701-snapshot-YBBn0v/'
+    }
+}
+subprojects {
+    apply {
+        plugin("org.jetbrains.kotlin.jvm")
+        plugin("java-gradle-plugin")
+        plugin("maven-publish")
+    }
+
+    repositories {
+        mavenCentral()
+        google()
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            credentials {
+                username '5f112dbb4c4e70fdbff3005c'
+                password 'DYiHkvkEKR4G'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2017701-release-ubbvAx/'
+        }
+        maven {
+            credentials {
+                username '5f112dbb4c4e70fdbff3005c'
+                password 'DYiHkvkEKR4G'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2017701-snapshot-YBBn0v/'
+        }
+    }
+    dependencies {
+        implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.31'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+        implementation gradleApi()
+        implementation localGroovy()
+        implementation "com.android.tools.build:gradle:7.0.0-alpha01"
+
+        if (!"utils".equalsIgnoreCase(project.name)) {
+            implementation("com.github.lee.gradle.plugins:utils:1.0.0-SNAPSHOT")
+        }
+    }
+    test {
+        useJUnitPlatform()
+    }
+}
+
+
